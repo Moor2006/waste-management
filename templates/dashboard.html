@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - WasteTrack</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>♻</span> WasteTrack
+        </div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/waste-collection">Waste Collection</a>
+            <a href="/tracking">Tracking</a>
+            <a href="/complaints">Complaints</a>
+            <a href="/reports">Reports</a>
+        </nav>
+
+    </header>
+
+
+    <section class="page-content">
+
+        <p class="section-label">ADMIN DASHBOARD</p>
+
+        <h1>Waste Collection Requests</h1>
+
+        <p>
+            View all submitted waste collection requests.
+        </p>
+
+
+        <div style="overflow-x:auto; margin-top:30px;">
+
+            <table border="1"
+                   cellpadding="12"
+                   cellspacing="0"
+                   style="width:100%; border-collapse:collapse; background:white;">
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Waste Type</th>
+                        <th>Quantity</th>
+                        <th>Location</th>
+                        <th>Message</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    {% if requests %}
+
+                        {% for request in requests %}
+
+                        <tr>
+
+                            <td>{{ request[0] }}</td>
+
+                            <td>{{ request[1] }}</td>
+
+                            <td>{{ request[2] }}</td>
+
+                            <td>{{ request[3] }}</td>
+
+                            <td>{{ request[4] }}</td>
+
+                            <td>{{ request[5] }}</td>
+
+                            <td>{{ request[6] or "-" }}</td>
+
+                        </tr>
+
+                        {% endfor %}
+
+                    {% else %}
+
+                        <tr>
+                            <td colspan="7">
+                                No waste collection requests found.
+                            </td>
+                        </tr>
+
+                    {% endif %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

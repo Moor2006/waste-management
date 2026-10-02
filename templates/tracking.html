@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Request Tracking - WasteTrack</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>♻</span> WasteTrack
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Tracking Section -->
+    <section class="page-content">
+
+        <p class="section-label">REQUEST TRACKING</p>
+
+        <h1>Track Your Request</h1>
+
+        <p>
+            Enter your request ID to check the current status
+            of your waste collection request.
+        </p>
+
+
+        <div class="tracking-form">
+
+            <h2>Check Request Status</h2>
+
+            <label>Request ID</label>
+
+            <input type="text" placeholder="Enter Request ID">
+
+            <button type="button">
+                Track Request
+            </button>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

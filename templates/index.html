@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Waste Management Tracking System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>♻</span> WasteTrack
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="/login" class="login-btn">Login</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section -->
+     <!-- Hero Section -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            CLEANER TODAY • GREENER TOMORROW
+        </p>
+
+        <h1>
+            Smarter & Cleaner
+            <span>Waste Management</span>
+        </h1>
+
+        <p class="hero-text">
+            A digital waste management tracking system designed
+            to help local bodies manage waste collection,
+            complaints and community services efficiently.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="/login" class="primary-btn">
+                Get Started →
+            </a>
+
+            <a href="#about" class="secondary-btn">
+                Learn More
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <div class="waste-image">
+    <img src="{{ url_for('static', filename='waste-bins.png') }}" alt="Waste Bins">
+</div>
+
+        <div class="community-card">
+
+            <h3>🌱 Clean Community</h3>
+
+            <p>
+                Together we can build a cleaner,
+                healthier and sustainable community.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+   
+
+    <!-- Statistics -->
+    <section class="stats">
+
+        <div class="stat-box">
+            <h2>120+</h2>
+            <p>Collection Requests</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>95+</h2>
+            <p>Completed Collections</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>15+</h2>
+            <p>Active Workers</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>10+</h2>
+            <p>Service Areas</p>
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <div class="about-content">
+
+            <p class="section-label">ABOUT THE SYSTEM</p>
+
+            <h2>
+                Technology for a
+                <span>Cleaner Community</span>
+            </h2>
+
+            <p>
+                WasteTrack helps local bodies manage waste collection
+                activities digitally. Citizens can submit collection
+                requests and complaints, while administrators can
+                monitor requests and manage workers.
+            </p>
+
+            <p>
+                The system aims to improve communication, tracking
+                and transparency in local waste management services.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <div class="card-icon">🌱</div>
+
+            <h3>Our Goal</h3>
+
+            <p>
+                Better waste management through
+                simple and effective technology.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Services -->
+    <div class="service-container">
+
+    <a href="/waste-collection" class="service-link">
+        <div class="service-card">
+            <div class="service-icon">🗑️</div>
+            <h3>Waste Collection</h3>
+            <p>
+                Submit and manage waste collection requests
+                easily.
+            </p>
+        </div>
+    </a>
+
+
+    <a href="/tracking" class="service-link">
+        <div class="service-card">
+            <div class="service-icon">📍</div>
+            <h3>Request Tracking</h3>
+            <p>
+                Track the current status of your
+                waste collection request.
+            </p>
+        </div>
+    </a>
+
+
+    <a href="/complaints" class="service-link">
+        <div class="service-card">
+            <div class="service-icon">📢</div>
+            <h3>Complaints</h3>
+            <p>
+                Report waste-related problems and
+                monitor complaint status.
+            </p>
+        </div>
+    </a>
+
+
+    <a href="/reports" class="service-link">
+        <div class="service-card">
+            <div class="service-icon">📊</div>
+            <h3>Reports</h3>
+            <p>
+                Local bodies can view collection
+                statistics and reports.
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<!-- Call To Action -->
+<section class="cta">
+
+
+    <!-- Call To Action -->
+    <section class="cta">
+
+        <h2>Want to keep your community clean?</h2>
+
+        <p>
+            Use our system to report waste issues
+            and manage collection requests.
+        </p>
+
+        <a href="/login" class="primary-btn">
+            Get Started →
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="contact">
+
+        <div class="footer-logo">
+            ♻ WasteTrack
+        </div>
+
+        <p>
+            Waste Management Tracking System for Local Bodies
+        </p>
+
+        <p class="copyright">
+            © 2026 WasteTrack. CEP Project.
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Waste Collection - WasteTrack</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>♻</span> WasteTrack
+        </div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/#about">About</a>
+            <a href="/#services">Services</a>
+            <a href="/#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Waste Collection Section -->
+    <section class="page-content">
+
+        <p class="section-label">WASTE COLLECTION</p>
+
+        <h1>Waste Collection</h1>
+
+        <p>
+            Submit and manage your waste collection requests easily.
+        </p>
+
+
+        <div class="collection-form">
+
+            <h2>Request Waste Collection</h2>
+
+            <!-- Connected to Flask Backend -->
+            <form action="/waste-collection" method="POST">
+
+                <label>Full Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label>Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label>Location</label>
+                <input
+                    type="text"
+                    name="address"
+                    placeholder="Enter your location"
+                    required
+                >
+
+
+                <label>Waste Type</label>
+
+                <select name="waste_type" required>
+
+                    <option value="">Select waste type</option>
+                    <option value="Dry Waste">Dry Waste</option>
+                    <option value="Wet Waste">Wet Waste</option>
+                    <option value="Plastic Waste">Plastic Waste</option>
+                    <option value="Other">Other</option>
+
+                </select>
+
+
+                <label>Quantity</label>
+
+                <input
+                    type="text"
+                    name="quantity"
+                    placeholder="Example: 2 bags"
+                    required
+                >
+
+
+                <label>Additional Message</label>
+
+                <textarea
+                    name="message"
+                    placeholder="Enter your message"
+                ></textarea>
+
+
+                <button type="submit">
+                    Submit Request
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
+```

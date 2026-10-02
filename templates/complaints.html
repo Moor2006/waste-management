@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Complaints - WasteTrack</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>♻</span> WasteTrack
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Complaints Section -->
+    <section class="page-content">
+
+        <p class="section-label">COMPLAINTS</p>
+
+        <h1>Report a Complaint</h1>
+
+        <p>
+            Report waste-related problems and help us
+            keep your community clean.
+        </p>
+
+
+        <div class="collection-form">
+
+            <h2>Submit Complaint</h2>
+
+            <form>
+
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name">
+
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email">
+
+                <label>Location</label>
+                <input type="text" placeholder="Enter complaint location">
+
+                <label>Complaint Type</label>
+
+                <select>
+                    <option>Select complaint type</option>
+                    <option>Garbage Not Collected</option>
+                    <option>Overflowing Dustbin</option>
+                    <option>Illegal Dumping</option>
+                    <option>Other</option>
+                </select>
+
+                <label>Complaint Description</label>
+
+                <textarea placeholder="Describe your complaint"></textarea>
+
+                <button type="submit">
+                    Submit Complaint
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
